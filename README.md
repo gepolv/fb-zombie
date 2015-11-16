@@ -27,7 +27,7 @@ Usages
 ---
 <a name="FBTestUser") />
 ### FBTestUser(options) ###
-Initializes a new fbTestUser object.
+Initializes a new FBTestUser object.
 
 **Arguments**
 
@@ -38,7 +38,7 @@ Initializes a new fbTestUser object.
 
 ```js
 FBTestUser = require('fb-test-user');
-fbUsers = new FBTestUser('YOUR_APP_ID','YOUR_APP_SECRET');
+fbUsers = new FBTestUser('YOUR_APP_ID','YOUR_APP_ACCESS_TOKEN');
 ```
 <a name="create" />
 ### create(total, num_of_installed, callback) ###
