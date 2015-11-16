@@ -131,7 +131,7 @@ Delete "num" of test users.
 
 **Arguments**
 
-* **num** - The number of the user to delete.
+* **num** - The number of test users to delete.
 * **callback(error, results)** - The callback is called once all required users has been deleted, or an error occurred.
   * *error* - Error object.
   * *results* - Array of IDs of deleted test users.
@@ -233,7 +233,6 @@ Finally, run the tests:
 
     $ make test
 -->
----
 
 ## License ##
 
