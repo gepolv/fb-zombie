@@ -74,7 +74,7 @@ Creates a single test user.
 **Example**
 
 ```js
-fbUsers.create("Alum Rock", "all", function(error, result){
+fbUsers.createOne("Alum Rock", "all", true, function(error, result){
   console.log(result);
 });
 ```
@@ -97,13 +97,6 @@ Attention: Facebook has a limit for graph api access. Make sure you won't reach 
   * *results* - Array of user objects, including "id", "access_token" and "login_url".
 
 **Example**
-
-```js
-fbUsers.create("Alum Rock", "all", function(error, result){
-  if(error) return console.log(error.message);
-  console.log(result);
-});
-```
 
 ```js
 fbUsers.create100(function(error, result){
