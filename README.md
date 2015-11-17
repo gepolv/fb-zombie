@@ -1,6 +1,6 @@
 fb-test-user
 ===
-This node module is focusing on create testing environment for Facebook APP development/testing. One feature of this module to create a mass number of test users which then are made friends in terms of the specified requirement.
+This node module is focusing on create testing environment for Facebook APP development/testing. One feature of this module to create a massive number of test users which then are made friends in terms of the specified requirement.
 
 Installation
 ---
