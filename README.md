@@ -1,11 +1,11 @@
-fb-test-user
+fb-zombie
 ===
 This node module is focusing on create testing environment for Facebook APP development/testing. One feature of this module to create a massive number of test users which then are made friends in terms of the specified requirement.
 
 Installation
 ---
 
-    $ npm install fb-test-user
+    $ npm install fb-zombie
 
 Documentation
 ---
@@ -216,27 +216,26 @@ fbUsers.create(100,80, function(error, results){
 	});
 });
 ```
-
+Testing
 ---
-<!--
 ## Running Tests ##
 
 To run the test suite first invoke the following command within the repo, installing the development dependencies:
 
     $ npm install
 
-then create a file `test/creds.json` containing the following:
+then modify the file `test/config.js`:
 ```json
 {
   "appID": "YOUR_APP_ID",
-  "secret": "YOUR_APP_SECRET"
+  "secret": "YOUR_APP_ACCESS_TOKEN"
 }
 ```
 
 Finally, run the tests:
 
-    $ make test
--->
+    $ npm test
+
 
 ## License ##
 
