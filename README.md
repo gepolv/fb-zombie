@@ -86,7 +86,11 @@ Creates 100 test users with "all" permissions and 50 test users have the APP ins
 * create1000(callback): Creates 1000 test users with "all" permissions and 500 users have the APP installed.
 * create2000(callback): Creates 2000 test users with "all" permissions and 1000 users have the APP installed.
 
-Attention: Facebook has a limit for graph api access. Make sure you won't reach that limit. See [here](https://developers.facebook.com/docs/graph-api/advanced/rate-limiting) for more details.
+Attention: Facebook has a limit for graph api access. Make sure you won't reach that limit. From the Facebook documentation as of Nov. 16th, 2015, here's how rate limiting on the Graph API works:
+
+Rate limiting is done on your Facebook AppId. If your app reaches a rate limit, all calls made for that app will be limited not just on a per-user basis.
+Rate limiting is calculated by taking the number of users your app had the previous day and adding today's new logins. This gives a base number of users that your app has.
+As an example, if your app had 10 users yesterday and 5 new logins today, that would give you a base of 15 users. This means that your app can make ((10 + 5) * 200) = 3000 API calls in any 60 minute window. See [here](https://developers.facebook.com/docs/graph-api/advanced/rate-limiting) for more details.
 
 **Arguments**
 
