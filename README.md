@@ -9,7 +9,7 @@ Installation
 
 Documentation
 ---
-* [FBTestUser](#FBTestUser)
+* [FBZombie](#FBTestUser)
 * [create](#create)
   * [createOne](#createOne)
   * [create100](#create100)
