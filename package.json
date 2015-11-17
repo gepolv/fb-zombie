@@ -1,7 +1,7 @@
 {
   "name": "fb-zombie",
   "version": "0.1.1",
-  "description": "A Node module to automating the managing of a massive number of test users for Facebook APP testing. ",
+  "description": "A Node module to automate the managing of a massive number of test users for Facebook APP testing. ",
   "main": "fb-zombie.js",
   "directories": {
     "test": "test"
