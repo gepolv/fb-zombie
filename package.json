@@ -1,0 +1,39 @@
+{
+  "name": "fb-zombie",
+  "version": "0.1.0",
+  "description": "A Node module to automating the managing of a massive number of test users for Facebook APP testing. ",
+  "main": "fb-zombie.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha --reporter spec --timeout 60000 ./test/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gepolv/fb-zombie.git"
+  },
+  "keywords": [
+    "Facebook",
+    "test",
+    "user",
+    "graph",
+    "api",
+    "testing"
+  ],
+  "author": "Jinpeng LV",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gepolv/fb-zombie/issues"
+  },
+  "homepage": "https://github.com/gepolv/fb-zombie#readme",
+  "dependencies": {
+    "async": "^1.5.0",
+    "fs": "0.0.2",
+    "https": "^1.0.0"
+  },
+  "devDependencies": {
+    "chai": "^3.4.1",
+    "mocha": "^2.3.4"
+  }
+}
