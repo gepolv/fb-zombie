@@ -1,6 +1,6 @@
 fb-zombie
 ===
-This node module is focusing on create testing environment for Facebook APP development/testing. One feature of this module to create a massive number of test users which then are made friends in terms of the specified requirement.
+This node module is focusing on creating test environment for Facebook APP development/testing. One feature of this module is to create a massive number of test users which then are made friends in terms of the specified requirement.
 
 Installation
 ---
@@ -25,9 +25,9 @@ Documentation
 
 Usages
 ---
-<a name="FBTestUser") />
-### FBTestUser(options) ###
-Initializes a new FBTestUser object.
+<a name="FBZombie" />
+### FBZombie(options) ###
+Initializes a new FBZombie object which is in charge of managing test users.
 
 **Arguments**
 
@@ -37,8 +37,8 @@ Initializes a new FBTestUser object.
 **Example**
 
 ```js
-FBTestUser = require('fb-test-user');
-fbUsers = new FBTestUser('YOUR_APP_ID','YOUR_APP_ACCESS_TOKEN');
+FBZombie = require('fb-zombie');
+fbUsers = new FBZombie('YOUR_APP_ID','YOUR_APP_ACCESS_TOKEN');
 ```
 <a name="create" />
 ### create(total, num_of_installed, callback) ###
@@ -46,8 +46,8 @@ Creates "total" number of test users, "num_of_installed" of which have APP insta
 
 **Arguments**
 
-* *total* - The number of test users to be created. Note: Facebook requies each APP cannot create more than 2000 test users.
-* *num_of_installed* - The number of test users who have APP installed. 
+* **total** - The number of test users to be created. Note: Facebook requies each APP cannot create more than 2000 test users.
+* **num_of_installed** - The number of test users who have APP installed. 
 * **callback(error, results)** - The callback is called once the users creation are completed, or an error occurred.
   * *error* - Error object
   * *results* - Array of user objects, including "id", "access_token" and "login_url".
@@ -65,8 +65,8 @@ Creates a single test user.
 
 **Arguments**
 
-* *name* - The name of test user to be created.
-* *permissions* - Permissions for accessing this user. You can speciy "all" which means all permissions. See [Here](https://developers.facebook.com/docs/facebook-login/permissions/v2.5) for more details.
+* **name** - The name of test user to be created.
+* **permissions** - Permissions for accessing this user. You can speciy "all" which means all permissions. See [Here](https://developers.facebook.com/docs/facebook-login/permissions/v2.5) for more details.
 * **callback(error, result)** - The callback is called once the user creation is completed, or an error occurred.
   * *error* - Error object
   * *result* - An user object, including "id", "access_token" and "login_url".
@@ -94,8 +94,8 @@ As an example, if your app had 10 users yesterday and 5 new logins today, that w
 
 **Arguments**
 
-* *name* - The name of test user to be created.
-* *permissions* - Permissions for accessing this user. You can speciy "all" which means all permissions. See [Here](https://developers.facebook.com/docs/facebook-login/permissions/v2.5) for more details.
+* **name** - The name of test user to be created.
+* **permissions** - Permissions for accessing this user. You can speciy "all" which means all permissions. See [Here](https://developers.facebook.com/docs/facebook-login/permissions/v2.5) for more details.
 * **callback(error, results)** - The callback is called once the users creation are completed, or an error occurred.
   * *error* - Error object
   * *results* - Array of user objects, including "id", "access_token" and "login_url".
@@ -170,7 +170,7 @@ fbUsers.deleteOne("123456789", function(error, result){
 <a name="connect" />
 ### connect(userPair, callback) ###
 
-Connect two test users specified in "userPair". Each user must include valid "id" and user "access_token". Usually, this function is used together with "create*" functions. There is a better way to create friendship between test users using [makefriends](#makefriends).
+Connect two test users specified in "userPair". Each user must include valid "id" and user "access_token". Usually, this function is used together with "create*" functions. There is a better way to create friendship between test users using [makefriends](#makeFriends).
 
 **Arguments**
 
@@ -218,9 +218,8 @@ fbUsers.create(100,80, function(error, results){
 ```
 Testing
 ---
-## Running Tests ##
 
-To run the test suite first invoke the following command within the repo, installing the development dependencies:
+To run the test suite first invoke the following command <b>within the repo</b>, installing the development dependencies:
 
     $ npm install
 
@@ -245,6 +244,7 @@ Copyright (c) 2015 Jinpeng LV &lt;gepolv@gmail.com&gt;
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
 EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
 MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
